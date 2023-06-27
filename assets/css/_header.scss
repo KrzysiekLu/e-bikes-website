@@ -1,0 +1,134 @@
+// baner
+.baner{
+    height: 100svh;
+    margin-top: 5rem;
+    position: relative;
+    padding: 10% 10%;
+    overflow: hidden;
+    background: linear-gradient( 200deg , #00000000 60%,#000000ba 80%), url('../images/header.webp');
+    background-size: cover;
+    overflow: hidden;
+    background-position:left 30% bottom;
+    margin-bottom: 5rem;
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        
+        
+        
+    }
+    &__main-title{
+        position: relative;
+        z-index: 1;
+        color: $font-main-color;
+        background: #a8c441d9;
+        padding: 3rem 3rem;
+        max-width: 50%;
+        backdrop-filter: blur(11px);
+        white-space: nowrap;
+        max-width: 125px;
+        letter-spacing: 1.6px;
+        font-size: 7rem;
+    }
+    &__sub-title{
+        font-size: 2.5rem;
+        background: #4c4b4b70;
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+        line-height: 4rem;
+        letter-spacing: 1.4px;
+        margin-bottom: 5rem;
+        position: relative;
+        z-index: 1;
+        padding: 1rem;
+        position: absolute;
+        bottom: 20%;
+        right: 0;
+        left: 5%;
+        font-weight: 600;
+        color: $main-accent;
+        span{
+            font-size: 2rem;
+            white-space: nowrap;
+            color: $font-main-color;
+        }
+   
+        
+        
+    }
+    &__button{
+        position: absolute;
+        display: block;
+        bottom: 10%;
+        background: $main-accent;
+        color: $font-main-color;
+        box-shadow: 1px 5px 15px -2px #000;
+        text-transform: uppercase;
+        letter-spacing: 1.6px;
+        font-weight: 500;
+        transition: 0.2s all ease-in-out;
+        z-index: 3;
+        border: none;
+        font-size: 1.6rem;
+        padding: 1rem 2rem;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 1rem;    
+        a{
+            scroll-behavior: smooth;
+            i{
+                margin-left: 1rem;
+            }
+        }    
+      
+    }
+    &__button:hover{
+        transform: translateY(-5px);
+        box-shadow: 1px 10px 15px -2px #000;
+       
+    }
+   
+}
+@media(min-width:360px){
+    .baner__main-title{
+        font-size: 8rem;
+    }
+    .baner__sub-title{
+        left: 10%;
+    }
+}
+// Tablet
+@media(max-height:600px){
+    .baner__main-title{
+        font-size: 6rem;
+        padding: 1rem 2rem
+        margin
+    }
+    .baner__sub-title{
+        font-size: 2rem;
+        bottom: 7rem;
+        line-height: 3rem;
+    }
+    .baner__sub-title span{
+        font-size: 1.8rem;
+    }
+    .baner__button{
+        font-size: 1.6rem;
+    }
+}
+@media(min-width:768px){
+    .baner{
+        margin-top: 0;
+        height: 100vh;
+        img{
+            width: 100%;
+        }
+        &__sub-title{
+            max-width: 70%;
+        }
+    }
+}

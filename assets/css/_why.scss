@@ -1,0 +1,102 @@
+.section.why{
+    background: #333;
+    .section__box{
+        background: $main-accent;
+        border: none;
+        color: #333;
+        font-weight: 500;
+        box-shadow: $box-shadow;
+        padding-top: 5rem;
+        height: 100%;
+
+        &__title{
+            min-width: 25rem;
+            text-align: center;
+            background: #333;
+            padding: 0.2rem 4rem;
+            left: -1px;
+            top: -1px;
+            box-shadow: 0 0.5rem 2rem -1rem #333;
+        }
+        p{
+            font-size: 2.2rem;
+            line-height: 2.6rem;
+        }   
+        &__wrapper{
+            &-nested{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+    }
+    .why__image{
+        img{
+            max-width: 100%;
+            // width: auto;
+            // height: 305px;
+        }
+    }
+}
+@media(min-width:768px){
+    .section.why{
+        .section__box__wrapper{
+            flex-direction: column ;
+            
+            &-nested{
+                flex-direction: column;
+            }            
+        }
+        .section__box__wrapper:last-child .why__image{
+            order: 2;
+        }
+        .why__image{
+
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+         
+        
+    }
+}
+@media(min-width:992px){
+    .section.why{
+
+        .why__wrapper{
+            margin: 0 auto;
+          
+        }
+        .section__box__wrapper{
+            flex-direction: row ;
+            &-nested{
+                flex-direction: column;
+                width: 80%;
+            }            
+        }
+        .section__box__wrapper:last-child .why__image{
+            order: unset;
+            img{
+
+            }
+        }
+        .why__image{
+            img{
+                height: 100%;
+                width: auto;
+                object-fit: cover;
+            }
+        }
+         
+        
+    }
+}
+@media(min-width:1300px){
+    .section.why .why__image{
+        width: 41.8%;
+    }
+}
+.section__box__wrapper{
+    max-width: 160rem !important;
+}

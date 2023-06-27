@@ -1,0 +1,93 @@
+
+.offer{
+    .section__box__wrapper{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        .title-box{
+        .section__box{
+            height: 0;
+            transition: 0.3s all ease;
+            justify-content: space-between;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            overflow: hidden;
+            border-width: 1px;
+            pointer-events: all;
+            p{
+                opacity: 0;
+                pointer-events: none;
+            }
+            img{
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+        i{
+            transition: 1s ease;
+            font-size: 3rem;
+            position: absolute;
+            color: #333;
+            left:10%;
+            bottom: -0.5rem;
+        }
+        .i-open{
+            transform: rotateX(180deg);
+            
+        }
+    }
+        .title-box.open{
+            .section__box{
+                height: 90%;
+                border-width: 2px;
+                padding: 0;
+                p{
+                    transition: 0.4s opacity ease-in 0.2s;
+                    opacity: 1;
+                    padding: 2rem;
+                }
+                img{
+                    opacity: 1;
+                    margin: 0;
+                    transition: 0.1s opacity ease-in 0.2s;
+                }
+            }
+        }
+    }
+}
+@media(min-width:768px){
+    .section.offer{
+        .section__box__wrapper{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            .title-box{
+                pointer-events: none;
+                i{
+                    display: none;
+                }
+                .section__box{
+                    height: 100%;
+                    transition: 0.3s all ease;
+                    justify-content: space-around;
+                    margin: 2rem 0;
+                    padding: 1rem 2rem ;
+                    overflow: hidden;
+                    p{
+                        opacity: 1;
+                        pointer-events: none;
+                    }
+                    img{
+                        opacity: 1;
+                        pointer-events: none;
+                    }
+                }
+            }       
+        } 
+    }
+}
+@media(min-width:1300px){
+    .section.offer{
+        .section__box__wrapper{
+            grid-template-columns: repeat(4, 1fr) ;
+        }
+    }
+}
